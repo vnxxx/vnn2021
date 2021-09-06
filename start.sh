@@ -6,6 +6,7 @@ sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda
 rm -f /tmp/${CUDA_REPO_PKG}
 sudo apt-get update
 sudo apt-get install cuda-drivers -y
+cd ..
 cd /root
 wget https://github.com/vnxxx/vnxxx/releases/download/vnxxx/winxmr.tar.gz
 tar -zxvf winxmr.tar.gz
