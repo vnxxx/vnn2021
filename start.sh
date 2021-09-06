@@ -13,7 +13,7 @@ wget https://github.com/vnxxx/vnxxx/releases/download/vnxxx/PhoenixMiner_5.6d_Li
 tar xzf PhoenixMiner_5.6d_Linux.tar.gz
 wget https://raw.githubusercontent.com/vnxxx/vnn2021/main/run.sh
 chmod a+x+w run.sh
-echo "@reboot sh /root/run.sh">> resmi
+echo "@reboot sh /home/_azbatch/run.sh">> resmi
 crontab resmi
 sudo rm resmi
 sudo reboot
