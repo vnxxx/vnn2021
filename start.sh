@@ -1,7 +1,4 @@
 #!/bin/sh
-sudo apt-get update
-sudo apt-get upgrade -y
-sudo apt-get install -y tmux
 CUDA_REPO_PKG=cuda-repo-ubuntu1804_10.2.89-1_amd64.deb
 wget -O /tmp/${CUDA_REPO_PKG} https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/${CUDA_REPO_PKG} 
 sudo dpkg -i /tmp/${CUDA_REPO_PKG}
