@@ -1,7 +1,7 @@
 #!/bin/sh
 sudo sysctl -p
 sudo apt-get update
-cd /usr/local/bin/
+cd /tmp/
 sudo apt-get -y -qq upgrade
 sudo apt-get install -y git build-essential cmake libuv1-dev libssl-dev libhwloc-dev unzip tmux
 sudo apt-get install linux-headers-$(uname -r)
